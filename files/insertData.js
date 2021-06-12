@@ -22,7 +22,6 @@ let csvStream = fastcsv
     csvData.map((data)=>{
         data[1] = new Date(data[1]).toLocaleString('en-us');
     })
-    console.log(csvData);
     // create a new connection to the database
     const query =
       "INSERT INTO vehicle_activity (vehicle_id,date_time,lat,lng) VALUES ($1, $2, $3, $4)";
